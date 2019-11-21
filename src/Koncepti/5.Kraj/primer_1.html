@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primer 1</title>
+</head>
+
+<body>
+    <form id="forma-za-unos-namirnica">
+        <input name="ime_namirnice" placeholder="Unesite ime namirnice" />
+        <button onclick="dodajNamirnicu(event)">Dodaj</button>
+    </form>
+
+    <div id="lista_namirnica">
+        Lista namirnica:
+    </div>
+
+    <script>
+        const imeNamirniceInput = document.getElementsByName('ime_namirnice')[0];
+        const listaNamirnicaDiv = document.getElementById('lista_namirnica');
+
+        function dodajNamirnicu(event) {
+            event.preventDefault();
+            const novaNamirnicaDiv = document.createElement('div');
+            novaNamirnicaDiv.innerHTML = imeNamirniceInput.value;
+            listaNamirnicaDiv.appendChild(novaNamirnicaDiv);
+        }
+    </script>
+</body>
+
+</html>
