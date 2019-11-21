@@ -26,7 +26,7 @@ export class TodoList extends React.Component {
             todos: []
         };
 
-        this.changeTodoStatus = this.changeTodoStatus.bind(this);
+        // todo
     }
 
     changeTodoStatus(id){
@@ -36,7 +36,7 @@ export class TodoList extends React.Component {
         todo.active = false;
         filteredTodos.push(todo);
 
-        this.setState({todos: filteredTodos});
+        // todo
     }
 
     componentDidMount(){
@@ -48,12 +48,9 @@ export class TodoList extends React.Component {
     render(){
         const { todos } = this.state;
         if (!todos) return [];
-        const activeTodos = todos.filter(item => item.active === true).map(todo => {
-            return <TodoItem key={todo.id} changeTodoStatus={this.changeTodoStatus} id={todo.id} key={todo.id} active={todo.active} subject={todo.subject} points={todo.points}/>
-        });
-        const doneTodos = todos.filter(item => item.active === false).map(todo => {
-            return <TodoItem key={todo.id} changeTodoStatus={this.changeTodoStatus} id={todo.id} key={todo.id} active={todo.active} subject={todo.subject} points={todo.points}/>
-        });
+        /* hint: use map and filter */
+        //const activeTodos =  /* todo */;
+        //const doneTodos = /* todo */;
 
         return <div>
                 <div className="col s6">

@@ -19,7 +19,7 @@ const TodoItem = (props) => {
                 <div hidden={props.active === false}> 
                     <hr />
                     <label>
-                        <input onChange={() => props.changeTodoStatus(props.id)} type="checkbox" className="filled-in" />
+                        <input onChange={/* todo */} type="checkbox" className="filled-in" />
                     <span>Done</span>
                     </label>
                 </div>
